@@ -12,6 +12,9 @@
     "build-storybook": "build-storybook",
     "init-msw": "msw init public/"
   },
+  "engines" : {
+    "node" : ">=16.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/chromaui/intro-storybook-react-template"
