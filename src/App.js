@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Switcher from './Switcher';
+import ModeApp from './stories/mode/ModeApp';
+import ThemeApp from './stories/theme/ThemeApp';
+import VarApp from './stories/variable/VarApp';
 
 function App() {
+  const [type, setType] = useState('mode');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switcher setType={setType}/>
+      {type === 'mode' && <ModeApp/>}
+      {type === 'theme' && <ThemeApp/>}
+      {type === 'var' && <VarApp/>}
     </div>
   );
 }
