@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "differ type of theme using styled-components",
   "author": "andrew781026 <andrew7810262000@gmail.com>",
+  "homepage": "https://andrew781026.github.io/theme-book/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
