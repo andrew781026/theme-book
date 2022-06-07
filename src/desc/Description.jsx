@@ -22,10 +22,10 @@ const RootDescription = styled.div`
   margin: 30px;
   padding: 0 20px;
   background-color: #fff;
+  cursor: pointer;
   max-width: 80vw;
   width: ${props => props.show ? '500px' : '30px'};
   height: ${props => props.show ? '90vh' : '40px'};
-  cursor: ${props => props.show ? 'default' : 'pointer'};
   overflow: ${props => props.show ? 'auto' : 'hidden'};
   border-radius: ${props => props.show ? '10px' : '50%'};
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
@@ -84,7 +84,7 @@ class Description extends React.PureComponent {
     return (
       <RootDescription
         show={this.state.show}
-        title={this.state.show ? '' : '描述'}
+        title={this.state.show ? '點擊收合' : '打開描述'}
         onClick={this.toggleShow}
       >
         {
