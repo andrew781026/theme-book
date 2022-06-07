@@ -21,3 +21,6 @@ const Card = styled.div`
   background-color: ${(props) => props.theme.mode === "dark" ? "#f7fb8d" : "#f7c81c"};
 `;
 ```
+
+### See Other Type
+you can use left `Tab` ( Mode . Theme . Var ) to switch & see differ

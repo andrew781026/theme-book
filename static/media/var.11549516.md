@@ -30,3 +30,6 @@ const Card = styled.div`
   background-color: var(--cardBgc);
 `;
 ```
+
+### See Other Type
+you can use left `Tab` ( Mode . Theme . Var ) to switch & see differ
