@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const Tab = styled.div`
@@ -33,15 +34,19 @@ const RootSwitcher = styled.div`
   gap: 20px;
   flex-direction: column;
   justify-content: center;
+
+  & > a {
+    text-decoration: none;
+  }
 `
 
-export default function Switcher({setType}) {
+export default function Switcher() {
 
   return (
     <RootSwitcher>
-      <Tab onClick={() => setType('mode')}>Mode</Tab>
-      <Tab onClick={() => setType('theme')}>Theme</Tab>
-      <Tab onClick={() => setType('var')}>Var</Tab>
+      <Link to="/mode"><Tab>Mode</Tab></Link>
+      <Link to="/theme"><Tab>Theme</Tab></Link>
+      <Link to="/var"><Tab>Var</Tab></Link>
     </RootSwitcher>
   )
 }
