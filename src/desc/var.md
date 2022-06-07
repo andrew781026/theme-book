@@ -1,23 +1,32 @@
 # CSS VAR
 
 - css var
-- var(--screenBgc)
+- var(--cardBgc)
 
-### Use ThemeProvider with state mode
-
-```html
- <ThemeProvider theme={{mode: this.state.mode}}>
-    <RootStyle>
-      <ModeCard toggleMode={this.toggleMode}/>
-    </RootStyle>
-  </ThemeProvider>
-```
-
-### At each component , we set relate style with `props.theme.mode`
+### In App.jsx
+use `document.documentElement.style.setProperty` change css-var
 
 ```javascript
-const CardWrap = styled.div`
+const spyTheme = {
+  cardBgc: '#585858',
   ...
-  background-color: ${(props) => props.theme.mode === "dark" ? "#f7fb8d" : "#f7c81c"};
+};
+const doctorTheme = {
+  cardBgc: '#fff',
+  ...
+};
+```
+
+```html
+<App toggleMode={this.setVarProperty}/>
+```
+
+### In Card.jsx
+use `var(--XXX)` set `background-color`
+
+```javascript
+const Card = styled.div`
+  ...
+  background-color: var(--cardBgc);
 `;
 ```

@@ -3,21 +3,32 @@
 - styled-component
 - theme object
 
-### Use ThemeProvider with state mode
+### In App.jsx
+Use ThemeProvider with theme object
+
+```javascript
+const roseTheme = {
+  cardBgc: '#f87de7',
+  ...
+};
+const knifeTheme = {
+  cardBgc: '#ff5a5a',
+  ...
+};
+```
 
 ```html
- <ThemeProvider theme={{mode: this.state.mode}}>
-    <RootStyle>
-      <ModeCard toggleMode={this.toggleMode}/>
-    </RootStyle>
+ <ThemeProvider theme={(this.state.mode === 'knife') ? knifeTheme : roseTheme}>
+    <App toggleMode={this.toggleMode}/>
   </ThemeProvider>
 ```
 
-### At each component , we set relate style with `props.theme.mode`
+### In Card.jsx
+use `props.theme.cardBgc` to set `background-color`
 
 ```javascript
-const CardWrap = styled.div`
+const Card = styled.div`
   ...
-  background-color: ${(props) => props.theme.mode === "dark" ? "#f7fb8d" : "#f7c81c"};
+  background-color: ${(props) => props.theme.cardBgc};
 `;
 ```
