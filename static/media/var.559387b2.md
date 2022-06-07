@@ -1,4 +1,7 @@
-# Theme
+# CSS VAR
+
+- css var
+- var(--screenBgc)
 
 ### Use ThemeProvider with state mode
 

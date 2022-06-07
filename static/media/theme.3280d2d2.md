@@ -1,4 +1,7 @@
-# CSS VAR
+# Theme
+
+- styled-component
+- theme object
 
 ### Use ThemeProvider with state mode
 

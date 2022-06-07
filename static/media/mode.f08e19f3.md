@@ -1,5 +1,8 @@
 # The Mode
 
+- styled-component
+- conditions with mode
+
 ### Use ThemeProvider with state mode
 
 ```html
