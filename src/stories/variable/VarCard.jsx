@@ -42,7 +42,7 @@ const Description = styled.span`
 const TumblerWrapper = styled.span`
   cursor: pointer;
   position: absolute;
-  right: 20px;
+  left: 20px;
   top: 20px;
   width: 60px;
   height: 30px;

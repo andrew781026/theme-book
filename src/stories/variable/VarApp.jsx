@@ -6,7 +6,7 @@ const spyTheme = {
   mode: 'spy',
   cardBgc: '#585858',
   screenBgc: '#333',
-  titleColor: '#00ffff',
+  titleColor: '#00d9ff',
   descColor: '#fff',
   tumblerLeft: '3px'
 };
@@ -15,7 +15,7 @@ const doctorTheme = {
   mode: 'doctor',
   cardBgc: '#fff',
   screenBgc: '#E0FFFF',
-  titleColor: '#00ffff',
+  titleColor: '#00d9ff',
   descColor: '#585858',
   tumblerLeft: '30px'
 };
