@@ -1,5 +1,8 @@
 # CSS VAR
 
+- css var
+- var(--screenBgc)
+
 ### Use ThemeProvider with state mode
 
 ```html

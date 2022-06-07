@@ -4,6 +4,7 @@ import ThemeApp from './stories/theme/ThemeApp';
 import VarApp from './stories/variable/VarApp';
 import Description from "./desc/Description";
 import {Switch, Route} from "react-router-dom";
+import GithubCorner from 'react-github-corner';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route  path="*"><ModeApp/></Route>
       </Switch>
       <Description/>
+      <GithubCorner href="https://github.com/andrew781026/theme-book" />
     </div>
   );
 }

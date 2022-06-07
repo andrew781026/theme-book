@@ -41,6 +41,7 @@
     "babel-loader": "^8.2.5",
     "msw": "^0.36.8",
     "msw-storybook-addon": "^1.6.3",
+    "react-github-corner": "^2.5.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "5.2.0",
     "react-syntax-highlighter": "^15.5.0"
