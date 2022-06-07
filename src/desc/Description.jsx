@@ -53,6 +53,7 @@ const RootDescription = styled.div`
 
   &::-webkit-scrollbar-thumb:hover {
     background: #999;
+    background-clip: content-box;
   }
 `
 
