@@ -74,13 +74,25 @@ class Description extends React.PureComponent {
   handleText = () => {
     const {location} = this.props;
     const markdown = this.getRelatedMD(location.pathname);
-    fetch(markdown)
+    const inStorage = sessionStorage.getItem(markdown);
+    if (inStorage) this.setState({text: inStorage});
+    else fetch(markdown)
       .then((response) => response.text())
-      .then((text) => this.setState({text}))
+      .then((text) => {
+        this.setState({text});
+        sessionStorage.setItem(markdown, text);
+      })
+  }
+
+  componentDidMount() {
+    this.handleText();
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    this.handleText();
   }
 
   render() {
-    this.handleText();
     return (
       <RootDescription
         show={this.state.show}
